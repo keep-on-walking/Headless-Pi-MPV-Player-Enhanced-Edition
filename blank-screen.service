@@ -1,0 +1,11 @@
+[Unit]
+Description=Blank Screen Service
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/fix_blank_screen.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
