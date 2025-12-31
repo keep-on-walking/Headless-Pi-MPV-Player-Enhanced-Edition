@@ -39,10 +39,10 @@ This enhanced version includes significant improvements to code quality, perform
 
 ### ⚡ Performance Improvements
 
-#### 1. **Async File Uploads**
-- ✅ File uploads now use `aiofiles` for async I/O
+#### 1. **Chunked File Uploads**
+- ✅ File uploads use chunked streaming to disk
 - ✅ Chunked uploads (8KB chunks) to prevent memory exhaustion
-- ✅ Non-blocking uploads for large files
+- ✅ Streams directly to disk for large files
 - ✅ Service remains responsive during uploads
 
 #### 2. **Proper Process Management**
