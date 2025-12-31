@@ -1,0 +1,15 @@
+[Unit]
+Description=Blank Screen Service for Headless MPV Player
+DefaultDependencies=no
+Before=sysinit.target
+After=systemd-vconsole-setup.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/fix_blank_screen.sh
+StandardOutput=null
+StandardError=null
+RemainAfterExit=yes
+
+[Install]
+WantedBy=sysinit.target
